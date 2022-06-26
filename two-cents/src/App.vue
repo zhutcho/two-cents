@@ -2,13 +2,15 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
-import Dashboard from './views/Dashboard.vue'
+import Header from './components/Header.vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter();
 </script>
 
 <template>
-  <img class="mx-auto" alt="Vue logo" src="./assets/logo.png" />
-  <!-- <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" /> -->
-  <Dashboard msg="Yessir"/>
+  <Header/>
+  <router-view/>
 </template>
 
 <style>
